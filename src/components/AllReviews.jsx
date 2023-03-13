@@ -8,9 +8,9 @@ export const AllReviews = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
+        setLoading(false)
         fetchReviews()
             .then((res)=>{
-                setLoading(false)
                 setReviewItemsList(res)
         })
     }, [])
