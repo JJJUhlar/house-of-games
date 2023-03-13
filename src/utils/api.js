@@ -20,7 +20,7 @@ export const fetchCommentsByReviewId = (review_id) => {
 }
 
 export const postCommentToReview = (review_id, comment, author) => {
-    api.post(`reviews/${review_id}/comments`)
+    api.post(`reviews/${review_id}/comments`, {username: author, body: comment})
         .then((res)=>{
             console.log(res)
             return res
