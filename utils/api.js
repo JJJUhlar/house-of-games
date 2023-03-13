@@ -7,6 +7,7 @@ const api = axios.create({
 export const fetchReviews = () => {
     return api.get('/reviews')
         .then((res) => {
+            console.log(res)
             return res;
         })
 }
