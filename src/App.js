@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
-import {Header} from "components/Header"
-import {AllReviews} from "components/AllReviews"
+import {Header} from "./components/Header"
+import {AllReviews} from "./components/AllReviews"
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route 
           path="/"
-          element={<AllReviews />}/>
+          element={<AllReviews className="AllReviews" />}/>
       </Routes>
     </>
   );
