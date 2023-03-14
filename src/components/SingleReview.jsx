@@ -24,21 +24,15 @@ export const SingleReview = () => {
     const handleVoteUp = () => {
         setHasVoted(true)
         setVisibleVotes(visibleVotes + 1)
-        setFullReview({...fullReview}, fullReview.votes = fullReview.votes + 1)
         sendReviewVote(review_id, +1)
-            .then(()=>{
-                setVisibleVotes(fullReview.votes)
-            })
+
     }
 
     const handleVoteDown = () => {
         setHasVoted(true)
         setVisibleVotes(visibleVotes - 1)
-        setFullReview({...fullReview}, fullReview.votes = fullReview.votes - 1)
         sendReviewVote(review_id, -1)
-            .then(()=>{
-                setVisibleVotes(fullReview.votes)
-            })
+
     }
 
     if (isLoading) {
