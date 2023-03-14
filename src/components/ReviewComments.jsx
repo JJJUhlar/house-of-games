@@ -27,10 +27,9 @@ export const ReviewComments = () => {
             {commentsList.map(({comment_id, author, created_at, body, votes})=>{
                 return (
                     <li key={comment_id} className="commentCard">
-                        <p>{author}</p>
-                        <p>{created_at}</p>
-                        <p>{body}</p>
-                        <p>{votes}</p>
+                        <p>"{body}" - {author}</p>
+                        <p><em>at {created_at}</em></p>
+                        <p><em>Votes: {votes}</em></p>
                     </li>
                 )
             })}

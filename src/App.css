@@ -19,3 +19,10 @@ h1 {
   padding: 10px;
   margin: 10px;
 }
+
+.commentCard {
+  padding: 5px 20px;
+  background-color: aliceblue;
+  margin: 10px -4px;
+  border-radius: 10px;
+}
