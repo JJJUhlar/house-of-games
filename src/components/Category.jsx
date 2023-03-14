@@ -12,7 +12,6 @@ export const Category = () => {
         setIsLoading(false)
         fetchReviewsByCategory(category)
             .then((res)=>{
-                console.log(res)
                 setReviewsList(res)
             })
     },[category])

@@ -16,15 +16,15 @@ export const Header = () => {
         <section>
             <h1>House of Games</h1>
                 <nav>
-                    <li><Link to='/'><button>All Reviews</button></Link></li>
-                    <ul>
+                    <ul className="navList">
+                        <li className="navItem" key="allReviews"><Link to='/'><button className="navBtn">All Reviews</button></Link></li>
                         {categories.map(({slug})=>{
                             return (
-                                <li key={slug}>
-                                        <Link to={`/category/${slug}`}>
-                                            <button>{slug}</button>
-                                        </Link>
-                                    </li> 
+                                <li key={slug} className="navItem">
+                                    <Link to={`/category/${slug}`}>
+                                        <button className="navBtn">{slug}</button>
+                                    </Link>
+                                </li> 
                             )
                         })}
                     </ul>
