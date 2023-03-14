@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { fetchSingleReview } from "../utils/api"
 import { AllReviews } from "./AllReviews"
 import { ReviewComments } from "./ReviewComments"
@@ -33,7 +33,7 @@ export const SingleReview = () => {
             <p>
                 {fullReview.review_body}
             </p>
-            <Link to={<AllReviews />}><button>Go back</button></Link>
+            <Link to='/'><button>Go back to all reviews</button></Link>
             <ReviewComments />
         </section>
     )
