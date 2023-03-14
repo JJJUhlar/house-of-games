@@ -1,3 +1,8 @@
+import axios from 'axios';
+
+const api = axios.create({
+    baseURL: "https://houseofboardgames.onrender.com/api/"
+})
 
 
 
@@ -24,5 +29,12 @@ export const postCommentToReview = (review_id, comment, author) => {
         .then((res)=>{
             console.log(res)
             return res
+        })
+}
+
+export const fetchReviews = () => {
+    return api.get('reviews')
+        .then((res) => {
+            return res.data.reviews;
         })
 }
