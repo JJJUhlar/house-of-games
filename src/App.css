@@ -11,3 +11,11 @@ h1 {
   text-align: center;
   margin: auto auto;
 }
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}

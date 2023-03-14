@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import {Header} from "./components/Header"
 import {AllReviews} from "./components/AllReviews"
+import { SingleReview } from './components/SingleReview';
 
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
         <Route 
           path="/"
           element={<AllReviews className="AllReviews" />}/>
+        <Route 
+          path="/reviews/:review_id"
+          element={<SingleReview />}/>
       </Routes>
     </>
   );

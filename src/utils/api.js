@@ -5,10 +5,9 @@ const api = axios.create({
 })
 
 
-
 export const fetchSingleReview = (review_id) => {
 
-    api.get(`reviews/${review_id}`)
+    return api.get(`reviews/${review_id}`)
         .then((res)=>{
             console.log(res.data.review)
             return res.data.review;
