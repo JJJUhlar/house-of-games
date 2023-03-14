@@ -24,8 +24,8 @@ export const ReviewComments = () => {
     if (commentsList.length === 0) {
         return (
             <>
-            <h2>Comments</h2>
-            <p>No comments yet</p>
+                <h2>Comments</h2>
+                <p>No comments yet</p>
             </>
         )
     }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
-import { fetchSingleReview } from "../utils/api"
+import { fetchSingleReview, sendReviewVote } from "../utils/api"
 import { AllReviews } from "./AllReviews"
 import { ReviewComments } from "./ReviewComments"
 
@@ -15,7 +15,33 @@ export const SingleReview = () => {
             .then((res)=>{
                 setFullReview(res)
             })
-    }, [review_id])
+    }, [review_id, fullReview])
+
+
+    const handleVoteUp = () => {
+        setFullReview({...fullReview}, fullReview.votes = fullReview.votes + 1)
+        console.log(fullReview.votes)
+        sendReviewVote(review_id, +1)
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+    }
+
+    const handleVoteDown = () => {
+        setFullReview({...fullReview}, fullReview.votes = fullReview.votes - 1)
+        console.log(fullReview.votes)
+        sendReviewVote(review_id, -1)
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+    }
+
 
     if (isLoading) {
         return (
@@ -34,6 +60,9 @@ export const SingleReview = () => {
                 {fullReview.review_body}
             </p>
             <Link to='/'><button>Go back to all reviews</button></Link>
+            <div className="votebuttons">
+                <button onClick={handleVoteUp}>Up Vote 👆</button> <button onClick={handleVoteDown}>Down Vote 👇</button>
+            </div>
             <ReviewComments />
         </section>
     )
