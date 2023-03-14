@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchSingleReview } from "../utils/api"
+import { ReviewComments } from "./ReviewComments"
 
 export const SingleReview = () => {
     const [fullReview, setFullReview] = useState({})
@@ -31,6 +32,7 @@ export const SingleReview = () => {
             <p>
                 {fullReview.review_body}
             </p>
+            <ReviewComments />
         </section>
     )
 }

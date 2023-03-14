@@ -15,8 +15,7 @@ export const fetchSingleReview = (review_id) => {
 }
 
 export const fetchCommentsByReviewId = (review_id) => {
-
-    api.get(`reviews/${review_id}/comments`)
+    return api.get(`reviews/${review_id}/comments`)
         .then((res)=>{
             console.log(res.data.comments)
             return res.data.comments
@@ -24,7 +23,7 @@ export const fetchCommentsByReviewId = (review_id) => {
 }
 
 export const postCommentToReview = (review_id, comment, author) => {
-    api.post(`reviews/${review_id}/comments`, {username: author, body: comment})
+    return api.post(`reviews/${review_id}/comments`, {username: author, body: comment})
         .then((res)=>{
             console.log(res)
             return res

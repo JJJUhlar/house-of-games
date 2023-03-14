@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
-import {fetchComments} from '../utils/api'
+import { useParams } from "react-router-dom";
+import {fetchCommentsByReviewId} from '../utils/api'
 
 export const ReviewComments = () => {
     const [commentsList, setCommentsList] = useState([]);
     const [isLoading, setLoading] = useState(true)
+    const {review_id} = useParams()
 
     useEffect(()=>{
         setLoading(false)
-        fetchComments(id)
+        fetchCommentsByReviewId(review_id)
             .then((res)=>{
                 console.log(res)
                 setCommentsList(res)
             })
-    },[])
+    },[review_id])
 
     if (isLoading) {
         return (
