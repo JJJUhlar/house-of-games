@@ -49,3 +49,12 @@ export const fetchCategories = () => {
             return res.data.categories
         })
 }
+
+export const fetchReviewsByCategory = (category) => {
+    console.log(category, "<<<")
+    return api.get(`reviews?category=${category}`)
+        .then((res)=>{
+            console.log(res)
+            return res.data.reviews;
+        })
+}

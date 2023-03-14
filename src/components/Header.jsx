@@ -22,7 +22,7 @@ export const Header = () => {
                             return (
                                 <li key={slug}>
                                         <Link to={`/category/${slug}`}>
-                                        <button>{slug}</button>
+                                            <button>{slug}</button>
                                         </Link>
                                     </li> 
                             )
