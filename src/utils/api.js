@@ -42,3 +42,10 @@ export const sendReviewVote = (review_id, vote) => {
             return res
         })
 }
+
+export const fetchCategories = () => {
+    return api.get(`categories`)
+        .then((res)=>{
+            return res.data.categories
+        })
+}

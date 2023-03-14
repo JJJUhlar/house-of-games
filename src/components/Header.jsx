@@ -4,7 +4,13 @@ export const Header = () => {
     return (
         <section>
             <h1>House of Games</h1>
-            <Link to='/'><button>All Reviews</button></Link>
+            
+                <li><Link to='/'><button>All Reviews</button></Link></li>
+                <ul>
+                    
+
+                    <li></li>
+                </ul>
         </section>
     )
 }
