@@ -11,7 +11,6 @@ export const ReviewComments = () => {
         setLoading(false)
         fetchCommentsByReviewId(review_id)
             .then((res)=>{
-                console.log(res)
                 setCommentsList(res)
             })
     },[review_id])
@@ -22,15 +21,27 @@ export const ReviewComments = () => {
         )
     }
 
+    if (commentsList.length === 0) {
+        return (
+            <>
+            <h2>Comments</h2>
+            <p>No comments yet</p>
+            </>
+        )
+    }
+
     return (
         <ul>
             {commentsList.map(({comment_id, author, created_at, body, votes})=>{
                 return (
+                    <>
+                    <h2>Comments</h2>
                     <li key={comment_id} className="commentCard">
                         <p>"{body}" - {author}</p>
                         <p><em>at {created_at}</em></p>
                         <p><em>Votes: {votes}</em></p>
                     </li>
+                    </>
                 )
             })}
         </ul>
