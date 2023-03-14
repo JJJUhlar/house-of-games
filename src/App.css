@@ -26,3 +26,15 @@ h1 {
   margin: 10px -4px;
   border-radius: 10px;
 }
+
+.commentForm {
+  background-color: aliceblue;
+  padding: 15px;
+  margin: 0px;
+}
+
+.commentField {
+  padding: 5px;
+  margin: 5px;
+  width: -webkit-fill-available;
+}
