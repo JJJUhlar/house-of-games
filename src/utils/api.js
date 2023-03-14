@@ -34,3 +34,11 @@ export const fetchReviews = () => {
             return res.data.reviews;
         })
 }
+
+export const sendReviewVote = (review_id, vote) => {
+    return api.patch(`reviews/${review_id}`, {inc_votes: vote})
+        .then((res)=>{
+            console.log(res)
+            return res
+        })
+}
