@@ -2,11 +2,14 @@ import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import { fetchReviewsByCategory } from "../utils/api"
 import { ReviewCard } from "./ReviewCard"
+import { Filter } from "./Filter"
 
 export const Category = () => {
     const [reviewsList, setReviewsList] = useState([])
     const {category} = useParams()
     const [isLoading, setIsLoading] = useState(true)
+    const [filter, setFilter] = useState({})
+
 
     useEffect(()=>{
         setIsLoading(false)
@@ -25,6 +28,8 @@ export const Category = () => {
     }
 
     return (
+        <>
+        <Filter setFilter={setFilter}/>
         <ul className='ReviewsList'>
             {reviewsList.map((review)=>{
                 return (
@@ -35,5 +40,6 @@ export const Category = () => {
                 )
             })}
         </ul>
+        </>
     )
 }
