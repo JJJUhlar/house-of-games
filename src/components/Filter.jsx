@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-export const Filter = ({filter, setFilter}) => {
-    const [sortSelection, setSortSelection] = useState(null)
-    const [orderSelection, setOrderSelection] = useState(null)
+export const Filter = ({setFilter}) => {
+    const [sortSelection, setSortSelection] = useState('')
+    const [orderSelection, setOrderSelection] = useState('')
 
     const handleFilterSubmit = (event) => {
         event.preventDefault();
-        setFilter({sort_by:})
+        setFilter({
+                sort_by: sortSelection,
+                order_by: orderSelection
+                })
     }
-
-    
 
     return (
         <form onSubmit={handleFilterSubmit}>

@@ -8,15 +8,17 @@ export const AllReviews = () => {
     
     const [reviewItemsList, setReviewItemsList] = useState([])
     const [loading, setLoading] = useState(true)
-    const [filter, setFilter] = useState(null)
+    const [filter, setFilter] = useState({})
 
     useEffect(()=>{
         setLoading(false)
-        fetchReviews()
+        console.log(filter)
+        fetchReviews(filter)
             .then((res)=>{
+                console.log(res)
                 setReviewItemsList(res)
         })
-    }, [])
+    }, [filter])
 
     if (loading === true) {
         return (

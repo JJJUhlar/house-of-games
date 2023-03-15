@@ -28,8 +28,22 @@ export const postCommentToReview = (review_id, comment, author) => {
         })
 }
 
-export const fetchReviews = () => {
-    return api.get('reviews')
+export const fetchReviews = (filter) => {
+    let url = `reviews`
+
+    if (filter) {
+        url += `?`;
+    }
+
+    if (filter.sort_by) {
+        url += `sort_by=${filter.sort_by}&`
+    }
+
+    if (filter.order_by) {
+        url += `order=${filter.order_by}`
+    }
+    console.log(url)
+    return api.get(url)
         .then((res) => {
             return res.data.reviews;
         })
