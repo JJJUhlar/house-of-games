@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import { fetchSingleReview, sendReviewVote } from "../utils/api"
-import { AllReviews } from "./AllReviews"
 import { ReviewComments } from "./ReviewComments"
 
 export const SingleReview = () => {
