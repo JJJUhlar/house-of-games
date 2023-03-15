@@ -26,6 +26,7 @@ export const ReviewComments = () => {
         return (
             <>
                 <h2>Comments</h2>
+                <PostComment commentsList={commentsList} setCommentsList={setCommentsList}/>
                 <p>No comments yet</p>
             </>
         )

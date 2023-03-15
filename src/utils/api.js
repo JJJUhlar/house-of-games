@@ -29,11 +29,7 @@ export const postCommentToReview = (review_id, comment, author) => {
 }
 
 export const fetchReviews = (filter) => {
-    let url = `reviews`
-
-    if (filter) {
-        url += `?`;
-    }
+    let url = `reviews?`
 
     if (filter.sort_by) {
         url += `sort_by=${filter.sort_by}&`
@@ -42,7 +38,7 @@ export const fetchReviews = (filter) => {
     if (filter.order_by) {
         url += `order=${filter.order_by}`
     }
-    console.log(url)
+
     return api.get(url)
         .then((res) => {
             return res.data.reviews;

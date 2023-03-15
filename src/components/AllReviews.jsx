@@ -12,10 +12,8 @@ export const AllReviews = () => {
 
     useEffect(()=>{
         setLoading(false)
-        console.log(filter)
         fetchReviews(filter)
             .then((res)=>{
-                console.log(res)
                 setReviewItemsList(res)
         })
     }, [filter])
