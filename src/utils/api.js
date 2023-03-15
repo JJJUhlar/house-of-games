@@ -43,6 +43,20 @@ export const sendReviewVote = (review_id, vote) => {
         })
 }
 
+export const fetchCategories = () => {
+    return api.get(`categories`)
+        .then((res)=>{
+            return res.data.categories
+        })
+}
+
+export const fetchReviewsByCategory = (category) => {
+    return api.get(`reviews?category=${category}`)
+        .then((res)=>{
+            return res.data.reviews;
+        })
+}
+
 export const deleteCommentById = (comment_id) => {
     return api.delete(`comments/${comment_id}`)
         .then((res)=>{
