@@ -13,11 +13,11 @@ export const Category = () => {
 
     useEffect(()=>{
         setIsLoading(false)
-        fetchReviewsByCategory(category)
+        fetchReviewsByCategory(category, filter)
             .then((res)=>{
                 setReviewsList(res)
             })
-    },[category])
+    },[category,filter])
     
     if (isLoading) {
         return (

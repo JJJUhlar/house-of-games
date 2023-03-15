@@ -60,8 +60,19 @@ export const fetchCategories = () => {
         })
 }
 
-export const fetchReviewsByCategory = (category) => {
-    return api.get(`reviews?category=${category}`)
+export const fetchReviewsByCategory = (category, filter) => {
+    let url = `reviews?category=${category}&`
+
+    if (filter.sort_by) {
+        url += `sort_by=${filter.sort_by}&`
+    }
+
+    if (filter.order_by) {
+        url += `order=${filter.order_by}`
+    }
+    console.log(url)
+
+    return api.get(url)
         .then((res)=>{
             return res.data.reviews;
         })
