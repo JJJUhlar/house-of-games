@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {fetchCommentsByReviewId} from '../utils/api'
 import { PostComment } from "./PostComment"
+import { CommentCard } from "./CommentCard";
+
 
 export const ReviewComments = () => {
     const [commentsList, setCommentsList] = useState([]);

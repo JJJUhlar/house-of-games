@@ -42,3 +42,10 @@ export const sendReviewVote = (review_id, vote) => {
             return res
         })
 }
+
+export const deleteCommentById = (comment_id) => {
+    return api.delete(`comments/${comment_id}`)
+        .then((res)=>{
+            return res
+        })
+}
