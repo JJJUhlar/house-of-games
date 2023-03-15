@@ -36,18 +36,14 @@ export const ReviewComments = () => {
             <h2>Comments</h2>
             <PostComment commentsList={commentsList} setCommentsList={setCommentsList}/>
             <ul>
-                {commentsList.map(({comment_id, author, created_at, body, votes})=>{
+                {commentsList.map((comment)=>{
                     return (
-                        <>
-                        <li key={comment_id} className="commentCard">
-                            <p>"{body}" - {author}</p>
-                            <p><em>at {created_at}</em></p>
-                            <p><em>Votes: {votes}</em></p>
-                        </li>
-                        </>
+                        <CommentCard comment={comment} />
                     )
                 })}
             </ul>
         </>
     )
 }
+
+
