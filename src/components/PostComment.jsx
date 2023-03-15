@@ -8,7 +8,7 @@ export const PostComment = ({commentsList, setCommentsList}) => {
     const {review_id} = useParams()
     const {user} = useContext(UserContext)
     const [afterPostText, setAfterPostText] = useState('')
-    const [hasPosted, setHasPosted] = useState(false)
+    
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -23,7 +23,7 @@ export const PostComment = ({commentsList, setCommentsList}) => {
                     setCommentsList(commentsList.slice(1))
                 } else {
                     setAfterPostText('post submitted!')
-                    setHasPosted(true)
+                   
                 }
             })
     }
@@ -32,7 +32,7 @@ export const PostComment = ({commentsList, setCommentsList}) => {
             <form className="commentForm" onSubmit={handleSubmit}>
                 <label className="commentField" htmlFor="commentBox">Add Comment:</label>
                 <input className="commentField" id="commentBox" onChange={(event)=>{setNewCommentText(event.target.value)}} value={newCommentText}/>
-                <button className="commentField" type="submit" disabled={hasPosted}>Post Comment</button>
+                <button className="commentField" type="submit" >Post Comment</button>
                 <p>{afterPostText}</p>
             </form>
     )
