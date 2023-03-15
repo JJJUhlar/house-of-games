@@ -44,3 +44,15 @@ h1 {
   padding: 5px;
 
 }
+
+.commentForm {
+  background-color: aliceblue;
+  padding: 15px;
+  margin: 0px;
+}
+
+.commentField {
+  padding: 5px;
+  margin: 5px;
+  width: -webkit-fill-available;
+}
