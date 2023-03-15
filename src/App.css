@@ -27,6 +27,24 @@ h1 {
   border-radius: 10px;
 }
 
+.navList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.navItem {
+  padding: 0px;
+  margin: 5px;
+}
+
+.navBtn {
+  padding: 5px;
+
+}
+
 .commentForm {
   background-color: aliceblue;
   padding: 15px;
