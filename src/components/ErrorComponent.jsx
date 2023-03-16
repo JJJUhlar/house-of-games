@@ -1,9 +1,9 @@
 
-export const ErrorMessage = ({message}) => {
+export const ErrorMessage = ({error}) => {
 
     return (
         <p>
-            Error! : {message}
+            Error! : {error}
         </p>
     )
 }

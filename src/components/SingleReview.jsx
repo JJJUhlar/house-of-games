@@ -9,6 +9,7 @@ export const SingleReview = () => {
     const [isLoading, setLoading] = useState(true)
     const [visibleVotes, setVisibleVotes] = useState(0)
     const [hasVoted, setHasVoted] = useState(false)
+    const [error, setError] = useState(null)
 
     useEffect(()=>{
         setLoading(false)
@@ -16,6 +17,9 @@ export const SingleReview = () => {
             .then((res)=>{
                 setFullReview(res)
                 setVisibleVotes(fullReview.votes)
+            })
+            .catch((err)=>{
+                setError(err)
             })
     }, [review_id, fullReview])
 
@@ -38,6 +42,10 @@ export const SingleReview = () => {
         return (
             <p>Loading . . .</p>
         )
+    }
+
+    if (error) {
+        return <ErrorMessage error={error} />
     }
 
     return (

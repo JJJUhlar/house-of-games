@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import { fetchReviews } from "../utils/api"
 import { ReviewCard } from "./ReviewCard"
 import { Filter } from './Filter'
+import { ErrorMessage } from './ErrorComponent'
 
 export const AllReviews = () => {
-    
+    const [error, setError] = useState(null)
     const [reviewItemsList, setReviewItemsList] = useState([])
     const [loading, setLoading] = useState(true)
     const [filter, setFilter] = useState({})
@@ -15,6 +16,9 @@ export const AllReviews = () => {
         fetchReviews(filter)
             .then((res)=>{
                 setReviewItemsList(res)
+            .catch((err)=>{
+                setError({err});
+            })
         })
     }, [filter])
 
@@ -22,6 +26,10 @@ export const AllReviews = () => {
         return (
                 <p>Loading. . .</p>
         )
+    }
+
+    if (error) {
+        return <ErrorMessage error={error} />
     }
 
     return (

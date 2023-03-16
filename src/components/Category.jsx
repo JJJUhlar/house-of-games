@@ -9,13 +9,16 @@ export const Category = () => {
     const {category} = useParams()
     const [isLoading, setIsLoading] = useState(true)
     const [filter, setFilter] = useState({})
-
+    const [error, setError] = useState(null)
 
     useEffect(()=>{
         setIsLoading(false)
         fetchReviewsByCategory(category, filter)
             .then((res)=>{
                 setReviewsList(res)
+            })
+            .catch((err)=>{
+                setError(err);
             })
     },[category,filter])
     
@@ -25,6 +28,10 @@ export const Category = () => {
                 Loading . . .
             </div>
         )
+    }
+
+    if (error) {
+        return <ErrorMessage error={error} />
     }
 
     return (
