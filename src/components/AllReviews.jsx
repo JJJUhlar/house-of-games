@@ -16,10 +16,10 @@ export const AllReviews = () => {
         fetchReviews(filter)
             .then((res)=>{
                 setReviewItemsList(res)
+            })
             .catch((err)=>{
                 setError({err});
             })
-        })
     }, [filter])
 
     if (loading === true) {
