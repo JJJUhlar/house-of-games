@@ -20,6 +20,7 @@ export const SingleReview = () => {
                 setVisibleVotes(fullReview.votes)
             })
             .catch((err)=>{
+                console.log(err)
                 setError(err)
             })
     }, [review_id, fullReview])
