@@ -13,8 +13,8 @@ export const Filter = ({setFilter}) => {
     }
 
     return (
-        <form onSubmit={handleFilterSubmit}>
-            <fieldset className="filterMenu">
+        <form className="filter_form"onSubmit={handleFilterSubmit}>
+            <fieldset >
                 <legend>Filter</legend>
                 <label htmlFor="sort-select"></label>
                 <select name="sort" id="sort-select" value={sortSelection} onChange={(event)=> setSortSelection(event.target.value)}>

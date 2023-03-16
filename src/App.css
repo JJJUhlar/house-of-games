@@ -22,6 +22,18 @@ p {
   justify-content: center;
 }
 
+.filter_form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filter_form select, button {
+  margin: 0.2em;
+  padding: 0.5em;
+}
+
+
 .review {
   display: flex;
   flex-direction: column;
