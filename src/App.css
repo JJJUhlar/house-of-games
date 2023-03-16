@@ -1,3 +1,7 @@
+body {
+  background-color: antiquewhite
+}
+
 li {
   list-style: none;
 }
@@ -8,18 +12,19 @@ ul {
 }
 
 h2 {
+  font-family: "MuseoModerno";
+  font-size: 1.7em;
   margin-top: 0.5em;
   margin-bottom: 0.2em;
 }
 
 p {
+  font-family: Inter;
+  line-height: 1.5rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-select:hover {
-  background-color: whitesmoke;
-}
 
 main {
   display: flex;
@@ -33,10 +38,28 @@ main {
   }
 }
 
-
 .header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-family: Fugaz One;
+  text-align: center;
+  
+}
+.header h1 {
+  color: cornsilk;
+  -webkit-text-stroke: 1px darkred;
+  text-shadow: 5px 5px 0px darkred;
+  font-size: 5em;
+}
+
+
+.banner {
+  min-height: 300px;
+  width: 100vw;
+  
 }
 
 .filter_form {
@@ -47,7 +70,14 @@ main {
 
 .filter_form select, button {
   margin: 0.2em;
-  padding: 0.5em;
+  padding: 1em;
+  background-color: aliceblue;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.filter_form select:hover, button:hover {
+  background-color: lightcoral;
 }
 
 
@@ -61,7 +91,7 @@ main {
 
 .commentCard {
   padding: 5px 20px;
-  background-color: aliceblue;
+  background-color: cornsilk;
   margin: 10px -4px;
   border-radius: 10px;
 }
@@ -70,16 +100,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  
   justify-content: center;
   margin: 5px;
   padding: 5px;
 }
 
 .nav_item {
+  font-size: 1.1em;
   padding: 10px;
   margin: 10px;
-  background-color: aliceblue;
+  background-color: cornsilk;
   border: solid 1px black ;
   box-shadow: 5px 5px 0px black;
 }
@@ -92,14 +122,11 @@ main {
 }
 
 .nav_item:hover {
-  color: white;
-  background-color: black;
-  border: solid 1px black;
-  box-shadow: 10px 10px 0px black;
-  
+  color: wheat;
+  background-color: crimson;
+  border: solid 1px darkred;
+  box-shadow: 10px 10px 0px darkred;
 }
-
-
 
 
 .commentForm {
@@ -128,27 +155,34 @@ main {
 .review_card {
   display: flex;
   margin: 5px;
-  padding: 5px;
+  padding: 0px;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: aliceblue;
+  background-color: cornsilk;
 }
 
 .review_card img {
   width: inherit;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.review_card__text {
+  padding: 1em 1em;
 }
 
 .review_card__btn {
   padding: 10px;
   margin: 15px 10px;
-  background-color: aliceblue;
+  background-color: cornsilk;
   border: solid 1px black ;
   box-shadow: 5px 5px 0px black;
 }
 
 .review_card__btn:hover {
-  border: solid 2px black;
-  box-shadow: 10px 10px 0px black;
+  color: wheat;
+  background-color: crimson;
+  border: solid 1px darkred;
+  box-shadow: 10px 10px 0px darkred;
   margin: 15px 10px;
   padding: 10px;
 }

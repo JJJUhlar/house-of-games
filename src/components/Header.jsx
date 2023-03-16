@@ -2,6 +2,9 @@
 export const Header = () => {
     
     return (
-            <h1 className="header">House of Games</h1>
+        <section className="header">
+            <h1 >House of Games</h1>
+        </section>
+        
     )
 }

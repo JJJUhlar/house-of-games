@@ -14,10 +14,12 @@ function App() {
 
   return (
     <>
+        <section className='banner'>
+          <Nav />
+          <Header  />
+          <Filter filter={filter} setFilter={setFilter} />
+        </section>
       <main>
-        <Header  />
-        <Nav />
-        <Filter filter={filter} setFilter={setFilter} />
         <Routes>
           <Route 
             path="/"
