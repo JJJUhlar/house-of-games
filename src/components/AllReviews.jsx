@@ -30,10 +30,7 @@ export const AllReviews = () => {
             <ul className='ReviewsList'>
                 {reviewItemsList.map((reviewItem)=>{
                     return (
-                        <li className="ReviewCard" key={reviewItem.review_id}>
                             <ReviewCard reviewItem={reviewItem} />
-                            <Link to={`/reviews/${reviewItem.review_id}`}><button>Read More</button></Link>
-                        </li>                    
                     )
                 })}
             </ul>
