@@ -18,7 +18,7 @@ export const AllReviews = () => {
                 setReviewItemsList(res)
             })
             .catch((err)=>{
-                setError({err});
+                setError(err);
             })
     }, [filter])
 
