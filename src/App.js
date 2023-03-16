@@ -21,7 +21,7 @@ function App() {
         <Route 
           path="/category/:category"
           element={<Category />}/>
-        <Route path="*" element={<ErrorPage />}/>
+        <Route path="/*" element={<ErrorPage />}/>
       </Routes>
     </>
   );

@@ -20,7 +20,6 @@ export const CommentCard = ({comment}) => {
 
     useEffect(()=>{
         if (comment.author === user.username) {
-            console.log('could be deleted')
             setNotOwnedByUser(false);
         }
     },[comment.author, user.username])
