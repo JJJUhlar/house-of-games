@@ -5,7 +5,7 @@ import {Header} from "./components/Header"
 import {AllReviews} from "./components/AllReviews"
 import { SingleReview } from './components/SingleReview';
 import { Category } from './components/Category';
-
+import { ErrorPage } from './components/ErrorPage';
 
 function App() {
   return (

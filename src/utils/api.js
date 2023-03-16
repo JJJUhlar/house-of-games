@@ -77,6 +77,14 @@ export const fetchReviewsByCategory = (category, filter) => {
             return res.data.reviews;
         })
 }
+// return api.get(path, {
+//      params: {
+//          sort_by: sort_by,
+//          order_by: order_by,
+//          limit: 20
+//          category: category 
+// }
+// })
 
 export const deleteCommentById = (comment_id) => {
     return api.delete(`comments/${comment_id}`)

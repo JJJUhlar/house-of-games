@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import { fetchReviewsByCategory } from "../utils/api"
 import { ReviewCard } from "./ReviewCard"
 import { Filter } from "./Filter"
+import { ErrorMessage } from "./ErrorComponent"
 
 export const Category = () => {
     const [reviewsList, setReviewsList] = useState([])

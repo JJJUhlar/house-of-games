@@ -2,8 +2,9 @@
 export const ErrorMessage = ({error}) => {
 
     return (
-        <p>
-            Error! : {error}
-        </p>
+        <>
+            <h2>{error.status}</h2>
+            <p>{error.message}</p>
+        </>
     )
 }
