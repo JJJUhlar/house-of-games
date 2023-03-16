@@ -7,10 +7,7 @@ ul {
   margin: 5px 0px;
 }
 
-h1 {
-  text-align: center;
-  margin: auto auto;
-}
+
 
 .review {
   display: flex;
@@ -27,7 +24,7 @@ h1 {
   border-radius: 10px;
 }
 
-.navList {
+.nav_list {
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -35,10 +32,28 @@ h1 {
   justify-content: flex-start;
 }
 
-.navItem {
-  padding: 0px;
-  margin: 5px;
+.nav_item {
+  padding: 15px;
+  margin: 15px;
+  background-color: aliceblue;
+  border: solid 1px black ;
+  box-shadow: 5px 5px 0px black;
 }
+
+.nav_item li, a {
+  outline: none;
+  color: black;
+  border: none;
+  text-decoration: none;
+}
+
+.nav_item:hover {
+  border: solid 2px black;
+  box-shadow: 10px 10px 0px black;
+  margin: 15px;
+  padding: 15px;
+}
+
 
 .navBtn {
   padding: 5px;
@@ -55,4 +70,41 @@ h1 {
   padding: 5px;
   margin: 5px;
   width: -webkit-fill-available;
+}
+
+.reviews_list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.review_card {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.review_card img {
+  width: inherit;
+}
+
+.review_card__btn {
+  padding: 10px;
+  margin: 15px 10px;
+  background-color: aliceblue;
+  border: solid 1px black ;
+  box-shadow: 5px 5px 0px black;
+}
+
+.review_card__btn:hover {
+  border: solid 2px black;
+  box-shadow: 10px 10px 0px black;
+  margin: 15px 10px;
+  padding: 10px;
+}
+
+.review_card_btn-container {
+  margin-top: 20px;;
 }

@@ -25,7 +25,7 @@ export const AllReviews = ({filter}) => {
     }
 
     return (
-        <ul className='ReviewsList'>
+        <ul className='reviews_list'>
             {reviewItemsList.map((reviewItem)=>{
                 return (
                         <ReviewCard reviewItem={reviewItem} />

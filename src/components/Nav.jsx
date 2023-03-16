@@ -14,13 +14,13 @@ export const Nav = () => {
 
     return (
         <nav>
-            <ul className="navList">
-                <li className="navItem" key="allReviews"><Link to='/'>All Reviews</Link></li>
+            <ul className="nav_list">
+                <Link to='/'><li className="nav_item" key="allReviews">All Reviews</li></Link>
                 {categories.map(({slug})=>{
                     return (
-                        <li key={slug} className="navItem">
-                            <Link to={`/category/${slug}`}>{slug}</Link>
-                        </li> 
+                        <Link to={`/category/${slug}`}>
+                            <li key={slug} className="nav_item">{slug}</li>
+                        </Link>
                     )
                 })}
             </ul>

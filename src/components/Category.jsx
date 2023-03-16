@@ -26,7 +26,7 @@ export const Category = ({filter}) => {
     }
 
     return (
-        <ul className='ReviewsList'>
+        <ul className='reviews_list'>
             {reviewsList.map((review)=>{
                 return (
                     <li key={review.review_id}>

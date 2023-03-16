@@ -30,7 +30,7 @@ export const Filter = ({setFilter}) => {
                     <option value="DESC">order descending</option>
                     <option value="ASC">order ascending</option>
                 </select>
-                <button type="submit">Apply filters</button>
+                <button type="submit">✓ Apply filters</button>
             </fieldset>
         </form>
     )
