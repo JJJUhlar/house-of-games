@@ -12,20 +12,25 @@ export const PostComment = ({commentsList, setCommentsList}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        const newComment = {comment_id: commentsList.length, created_at: "Just now", author: user.username, body: newCommentText, votes: 0}
-        setCommentsList([newComment, ...commentsList])
-        setNewCommentText('')
 
-        postCommentToReview(review_id,newCommentText,user.username)
-            .then((res)=>{
-                if (res.status >= 400) {
-                    setAfterPostText('Post Failed, please try again')
-                    setCommentsList(commentsList.slice(1))
-                } else {
-                    setAfterPostText('post submitted!')
-                   
-                }
-            })
+        if (newCommentText.length === 0) {
+            setAfterPostText('Try writing something')
+        } else {
+            const newComment = {comment_id: commentsList.length, created_at: "Just now", author: user.username, body: newCommentText, votes: 0}
+            setCommentsList([newComment, ...commentsList])
+            setNewCommentText('')
+    
+            postCommentToReview(review_id,newCommentText,user.username)
+                .then((res)=>{
+                    if (res.status >= 400) {
+                        setAfterPostText('Post Failed, please try again')
+                        setCommentsList(commentsList.slice(1))
+                    } else {
+                        setAfterPostText('post submitted!')
+                       
+                    }
+                })
+        }
     }
 
     return (
