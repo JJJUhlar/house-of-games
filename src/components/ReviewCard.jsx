@@ -12,7 +12,7 @@ export const ReviewCard = ({reviewItem}) => {
             In {reviewItem.category}, at {new Date(reviewItem.created_at).toDateString()}
             <br />
             <br />
-            <em>🗳️ {reviewItem.votes} 💬 {reviewItem.comment_count}</em>
+            🗳️ {reviewItem.votes} 💬 {reviewItem.comment_count}
             </p>
             
             <div className="review_card_btn-container">

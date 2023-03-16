@@ -14,20 +14,22 @@ function App() {
 
   return (
     <>
-      <Header  />
-      <Nav />
-      <Filter filter={filter} setFilter={setFilter} />
-      <Routes>
-        <Route 
-          path="/"
-          element={<AllReviews className="AllReviews" filter={filter}/>}/>
-        <Route 
-          path="/reviews/:review_id"
-          element={<SingleReview />} filter={filter}/>
-        <Route 
-          path="/category/:category"
-          element={<Category />}/>
-      </Routes>
+      <main>
+        <Header  />
+        <Nav />
+        <Filter filter={filter} setFilter={setFilter} />
+        <Routes>
+          <Route 
+            path="/"
+            element={<AllReviews filter={filter}/>}/>
+          <Route 
+            path="/reviews/:review_id"
+            element={<SingleReview />} filter={filter}/>
+          <Route 
+            path="/category/:category"
+            element={<Category />}/>
+        </Routes>
+      </main>
     </>
   );
 }

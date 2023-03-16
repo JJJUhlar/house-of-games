@@ -17,6 +17,23 @@ p {
   margin-bottom: 0.5em;
 }
 
+select:hover {
+  background-color: whitesmoke;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto ;
+}
+
+@media (min-width: 800px) {
+  main {
+    max-width: 1200px;
+  }
+}
+
+
 .header {
   display: flex;
   justify-content: center;
@@ -97,11 +114,16 @@ p {
   width: -webkit-fill-available;
 }
 
+.reviews_container{
+  display: flex;
+}
+
 .reviews_list {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
 }
+
 
 .review_card {
   display: flex;
@@ -135,3 +157,4 @@ p {
   margin-top: 20px;
   margin-bottom: 25px;
 }
+
