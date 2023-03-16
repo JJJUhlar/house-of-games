@@ -4,11 +4,11 @@ import { fetchReviews } from "../utils/api"
 import { ReviewCard } from "./ReviewCard"
 import { Filter } from './Filter'
 
-export const AllReviews = () => {
+export const AllReviews = ({filter}) => {
     
     const [reviewItemsList, setReviewItemsList] = useState([])
     const [loading, setLoading] = useState(true)
-    const [filter, setFilter] = useState({})
+    
 
     useEffect(()=>{
         setLoading(false)
@@ -25,15 +25,12 @@ export const AllReviews = () => {
     }
 
     return (
-        <>
-            <Filter filter={filter} setFilter={setFilter} />
-            <ul className='ReviewsList'>
-                {reviewItemsList.map((reviewItem)=>{
-                    return (
-                            <ReviewCard reviewItem={reviewItem} />
-                    )
-                })}
-            </ul>
-        </>
+        <ul className='ReviewsList'>
+            {reviewItemsList.map((reviewItem)=>{
+                return (
+                        <ReviewCard reviewItem={reviewItem} />
+                )
+            })}
+        </ul>
     )
 }

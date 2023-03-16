@@ -6,19 +6,24 @@ import {AllReviews} from "./components/AllReviews"
 import { SingleReview } from './components/SingleReview';
 import { Category } from './components/Category';
 import { Nav } from './components/Nav'
+import { Filter } from './components/Filter';
+import { useState } from 'react';
 
 function App() {
+  const [filter, setFilter] = useState({})
+
   return (
     <>
       <Header className="Header" />
       <Nav />
+      <Filter filter={filter} setFilter={setFilter} />
       <Routes>
         <Route 
           path="/"
-          element={<AllReviews className="AllReviews" />}/>
+          element={<AllReviews className="AllReviews" filter={filter}/>}/>
         <Route 
           path="/reviews/:review_id"
-          element={<SingleReview />}/>
+          element={<SingleReview />} filter={filter}/>
         <Route 
           path="/category/:category"
           element={<Category />}/>

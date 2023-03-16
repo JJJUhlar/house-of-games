@@ -30,8 +30,8 @@ export const CommentCard = ({comment}) => {
         <>
             <li key={comment.comment_id} hidden={deleted} className="commentCard">
                 <p>"{comment.body}" - {comment.author}</p>
-                <p><em>at {comment.created_at}</em></p>
-                <p><em>Votes: {comment.votes}</em></p>
+                <p><em>at {new Date(comment.created_at).toDateString()}</em></p>
+                <p><em>🗳️ {comment.votes}</em></p>
                 <button disabled={notOwnedByUser} hidden={notOwnedByUser} onClick={handleDeleteComment}>Delete Comment</button>
             </li>
         </>
