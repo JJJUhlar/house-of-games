@@ -54,7 +54,7 @@ export const SingleReview = () => {
             <h2>{fullReview.title}</h2>
             <h3>Reviewed by {fullReview.owner}</h3>
             <h4>{fullReview.category} Game, designed by {fullReview.designer}</h4>
-            <h5>Votes: {visibleVotes}, Date: {fullReview.created_at}</h5>
+            <h5>Votes: {visibleVotes}, Date: {new Date(fullReview.created_at).toDateString()}</h5>
             <img src={fullReview.review_img_url} alt={fullReview.title}/>
             <p>
                 {fullReview.review_body}
