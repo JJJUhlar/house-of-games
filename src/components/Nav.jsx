@@ -13,7 +13,7 @@ export const Nav = () => {
         },[])
 
     return (
-        <nav>
+        
             <ul className="nav_list">
                 <Link to='/'><li className="nav_item" key="allReviews">All Reviews</li></Link>
                 {categories.map(({slug})=>{
@@ -24,6 +24,6 @@ export const Nav = () => {
                     )
                 })}
             </ul>
-        </nav>
+        
     )
 }

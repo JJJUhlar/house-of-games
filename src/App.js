@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <Header className="Header" />
+      <Header  />
       <Nav />
       <Filter filter={filter} setFilter={setFilter} />
       <Routes>
