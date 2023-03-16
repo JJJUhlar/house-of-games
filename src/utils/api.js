@@ -23,7 +23,6 @@ export const fetchCommentsByReviewId = (review_id) => {
 export const postCommentToReview = (review_id, comment, author) => {
     return api.post(`reviews/${review_id}/comments`, {username: author, body: comment})
         .then((res)=>{
-            console.log(res)
             return res
         })
 }
@@ -48,7 +47,6 @@ export const fetchReviews = (filter) => {
 export const sendReviewVote = (review_id, vote) => {
     return api.patch(`reviews/${review_id}`, {inc_votes: vote})
         .then((res)=>{
-            console.log(res)
             return res
         })
 }
@@ -70,7 +68,6 @@ export const fetchReviewsByCategory = (category, filter) => {
     if (filter.order_by) {
         url += `order=${filter.order_by}`
     }
-    console.log(url)
 
     return api.get(url)
         .then((res)=>{
