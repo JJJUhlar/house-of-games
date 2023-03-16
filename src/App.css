@@ -7,7 +7,15 @@ ul {
   margin: 5px 0px;
 }
 
+h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
 
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 
 .review {
   display: flex;
@@ -84,6 +92,7 @@ ul {
   padding: 5px;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: aliceblue;
 }
 
 .review_card img {
@@ -106,5 +115,6 @@ ul {
 }
 
 .review_card_btn-container {
-  margin-top: 20px;;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
