@@ -77,7 +77,7 @@ main {
 }
 
 .filter_form select:hover, button:hover {
-  background-color: lightcoral;
+  background-color: lightyellow;
 }
 
 

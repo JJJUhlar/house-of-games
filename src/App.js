@@ -11,23 +11,22 @@ import { Filter } from './components/Filter';
 import { useState } from 'react';
 
 function App() {
-  const [filter, setFilter] = useState({})
 
   return (
     <>
         <section className='banner'>
           <Nav />
           <Header  />
-          <Filter filter={filter} setFilter={setFilter} />
+          <Filter />
         </section>
       <main>
         <Routes>
           <Route 
             path="/"
-            element={<AllReviews filter={filter}/>}/>
+            element={<AllReviews />}/>
           <Route 
             path="/reviews/:review_id"
-            element={<SingleReview />} filter={filter}/>
+            element={<SingleReview />} />
           <Route 
             path="/category/:category"
             element={<Category />}/>

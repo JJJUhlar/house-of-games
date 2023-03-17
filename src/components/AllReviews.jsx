@@ -24,7 +24,7 @@ export const AllReviews = () => {
             .catch((err)=>{
                 setError(err);
             })
-    }, [sort_by, order_by])
+    }, [sort_by, order_by, searchParams, setSearchParams])
 
     if (loading === true) {
         return (
