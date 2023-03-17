@@ -9,6 +9,7 @@ export const ReviewComments = () => {
     const [commentsList, setCommentsList] = useState([]);
     const [isLoading, setLoading] = useState(true)
     const {review_id} = useParams()
+    
 
     useEffect(()=>{
         setLoading(false)
@@ -16,7 +17,7 @@ export const ReviewComments = () => {
             .then((res)=>{
                 setCommentsList(res)
             })
-    },[review_id])
+    },[review_id, commentsList])
 
     if (isLoading) {
         return (
@@ -28,7 +29,7 @@ export const ReviewComments = () => {
         return (
             <>
                 <h2>Comments</h2>
-                <PostComment commentsList={commentsList} setCommentsList={setCommentsList}/>
+                <PostComment commentsList={commentsList} setCommentsList={setCommentsList} />
                 <p>No comments yet</p>
             </>
         )

@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
-export const Filter = ({setFilter}) => {
-    const [sortSelection, setSortSelection] = useState('')
-    const [orderSelection, setOrderSelection] = useState('')
-
+export const Filter = () => {
+    const [sortSelection, setSortSelection] = useState('title')
+    const [orderSelection, setOrderSelection] = useState('DESC')
+    let [searchParams, setSearchParams] = useSearchParams();
+    
     const handleFilterSubmit = (event) => {
         event.preventDefault();
-        setFilter({
-                sort_by: sortSelection,
-                order_by: orderSelection
-                })
+        setSearchParams({
+            sort_by: sortSelection,
+            order_by: orderSelection
+        })
     }
 
     return (
@@ -18,7 +20,6 @@ export const Filter = ({setFilter}) => {
                 <legend>Filter</legend>
                 <label htmlFor="sort-select"></label>
                 <select name="sort" id="sort-select" value={sortSelection} onChange={(event)=> setSortSelection(event.target.value)}>
-                    <option value="">filter by</option>
                     <option value="title">title</option>
                     <option value="owner">author</option>
                     <option value="created_at">date</option>
