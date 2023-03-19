@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# House Of Games - A forum for board-games reviews
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+House of Games is a forum for Board-Games reviews. There are a variety of categories of boardgames for users to explore, including 'Strategy,' 'Social Deduction,' and 'Deck Building Games' to name a few.
+Reviews can be filtered in a variety of ways such as by the title, author, date published, and number of comments.
+Logged in House of Games, users are able to vote on reviews, and leave comments on posted reviews.
+For the purposes of demonstration. The user is logged in by default as 'tickle122'
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+**[Deployed version available here](https://641476fb7b0d4c220c9ce512--house-of-games-uhlar.netlify.app/)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app is built in React and uses [my House of Board Games api](https://github.com/JJJUhlar/BoardGames), for the back end.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Local Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 0. Requirements
+- Node: >19.3.0
+- React: >18.2
+- React-dom: >18.2
+- React-router-dom: >6.9
+- Axios: >1.3
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 1. Install
+- Make a local copy of the repo in a directory of your choosing, like so.
+- `git clone https://github.com/JJJUhlar/house-of-games` 
+- `cd` into the repo and run `npm install` to install dependencies/packages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 2. Run local version
+- Then, use `npm start` to launch your development server.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 3. View the local version!
+- The default port hosting the local server is `http://localhost:3000/`. Once you've launched  the server [you can go there now](http://localhost:3000/) to view the app.
